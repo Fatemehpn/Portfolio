@@ -1,0 +1,16 @@
+.about-me-section{
+  .skill-tab-panel{
+    width: 100%;
+    max-width: 100vw;
+    .single-skill{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img{
+        width: 4rem;
+        height: 4rem;
+      }
+
+    }
+  }
+}

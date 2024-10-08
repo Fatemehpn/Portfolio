@@ -1,0 +1,36 @@
+body {
+  max-width: 2000px;
+}
+
+.home-work-section img {
+  object-fit: cover;
+  max-width: 40rem;
+  position: relative;
+  filter: grayscale(70%) opacity(100%) saturate(120%) sepia(0%);
+  transition: all 150ms;
+}
+.home-work-section img:hover {
+  filter: none;
+}
+.home-work-section .home-page-single-work .learn-more-button {
+  display: flex;
+}
+.home-work-section .home-page-single-work .learn-more-button svg {
+  width: 2rem;
+}
+
+.about-me-section .skill-tab-panel {
+  width: 100%;
+  max-width: 100vw;
+}
+.about-me-section .skill-tab-panel .single-skill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.about-me-section .skill-tab-panel .single-skill img {
+  width: 4rem;
+  height: 4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -24,13 +24,13 @@ function DetailedWorkHomePage() {
   },[restPathPosts])
 
   return (
-   <section className='home-work-section'>
+   <section className='home-work-section section' id='work-section'>
     { isLoaded?
       <section id={`post-${restDataWork.id}`}> 
         <h2>Featured Works</h2>
         {
           restDataWork.map(post=>
-            <article>
+            <article key={post.id}>
               <div className='home-page-single-work'>
                 <h3>{post.acf.work_title}</h3>
 
@@ -39,7 +39,7 @@ function DetailedWorkHomePage() {
                 )}
 
                 <p>{post.acf.work_short_description}</p>
-                <Link className='learn-more-button'>
+                <Link className='learn-more-button' to={`singleworkpage/${post.slug}`}>
                   <p>Learn More</p>
                   {rightArrow}
                 </Link>

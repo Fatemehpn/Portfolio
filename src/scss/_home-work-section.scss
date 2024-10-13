@@ -1,13 +1,12 @@
 .home-work-section{
   img{
    object-fit: cover;
-   max-width: 40rem;
+   max-width: 17rem;
    position: relative;
+   margin: 0 auto;
     // change this for the mobile
    filter: grayscale(70%)  opacity(100%) saturate(120%) sepia(0%);
    transition: all 150ms;
-
-
    &:hover{
     filter: none;
     

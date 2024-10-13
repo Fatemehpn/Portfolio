@@ -1,0 +1,54 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  .logo{
+    width: 4rem;
+    height: 4rem;
+  }
+  button{
+    border: 0.1rem solid  #F28705;
+    border-radius: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    background-color: transparent;
+    svg{
+      height: 1rem;
+    }
+  }
+
+  //general navigation style
+  .general-nav{
+    ul{
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      li{
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // mobile navigation style
+  .mobile-nav{
+    .social-links-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 0.3rem;
+      p{
+        margin: 0;
+      }
+      .social-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+      }
+    }
+  }
+
+  // desktop navigation style
+
+
+}

@@ -25,7 +25,7 @@ function AboutSection() {
   },[restPathItems])
 
   return (
-    <section className='about-me-section'>
+    <section className='about-me-section' id='about-section'>
     <h2>About Me</h2>
     {
       isLoaded?

@@ -6,13 +6,12 @@ import AboutSection from '../components/AboutSection'
 
 function HomePage() {
 
-  
   return (
-    <>
+    <main className='home-page'>
       <LandingSectionHome/>
       <DetailedWorkHomePage/>
       <AboutSection/>
-    </>
+    </main>
   )
 }
 

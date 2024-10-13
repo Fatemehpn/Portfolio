@@ -1,11 +1,83 @@
 body {
   max-width: 2000px;
+  margin: 0;
+  background-color: #ebe2da;
+  font-family: "Raleway";
+}
+body .home-page {
+  background-color: #ebe2da;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  width: 4rem;
+  height: 4rem;
+}
+header button {
+  border: 0.1rem solid #F28705;
+  border-radius: 0.6rem;
+  padding: 0.1rem 0.4rem;
+  background-color: transparent;
+}
+header button svg {
+  height: 1rem;
+}
+header .general-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+header .general-nav ul li a {
+  text-decoration: none;
+}
+header .mobile-nav .social-links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.3rem;
+}
+header .mobile-nav .social-links-wrapper p {
+  margin: 0;
+}
+header .mobile-nav .social-links-wrapper .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.landing-section {
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+.landing-section h1 {
+  font-family: "Gowun Batang";
+  font-weight: 200;
+  font-size: 3rem;
+  color: black;
+  margin: 0;
+}
+.landing-section h2 {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 2rem;
+}
+.landing-section p {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
 .home-work-section img {
   object-fit: cover;
-  max-width: 40rem;
+  max-width: 17rem;
   position: relative;
+  margin: 0 auto;
   filter: grayscale(70%) opacity(100%) saturate(120%) sepia(0%);
   transition: all 150ms;
 }
@@ -31,6 +103,10 @@ body {
 .about-me-section .skill-tab-panel .single-skill img {
   width: 4rem;
   height: 4rem;
+}
+
+.home-page {
+  margin: 0 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,22 +3,43 @@
   margin: 0 auto;
   text-align: center;
 
-  h1{
-    font-family: 'Gowun Batang';
-    font-weight: 200;
-    font-size: 3rem;
-    color: black;
-    margin: 0;
+  .name-wrapper{
+    margin-top: 5rem;
+    h1{
+      font-family: 'Gowun Batang';
+      font-weight: 200;
+      font-size: 3rem;
+      color: black;
+      margin: 0;
+    }
+    h2{
+      font-family: 'Raleway';
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
+    p{
+      font-family: 'Raleway';
+      font-weight: 300;
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+  
   }
-  h2{
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-size: 2rem;
+
+  svg{
+    margin-top: 4rem;
   }
-  p{
-    font-family: 'Raleway';
-    font-weight: 300;
-    font-size: 1.5rem;
-    font-style: italic;
+}
+
+@media(min-width:56em){
+  .landing-section{
+    .name-wrapper{
+      h1{
+        font-size: 4.5rem;
+      }
+      h2{
+        font-size: 2rem;
+      }
+    }
   }
 }

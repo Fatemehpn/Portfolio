@@ -1,12 +1,13 @@
 header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .logo{
     width: 4rem;
     height: 4rem;
   }
   button{
-    border: 0.1rem solid  #F28705;
+    border: 0.1rem solid  #703030;
     border-radius: 0.6rem;
     padding: 0.1rem 0.4rem;
     background-color: transparent;

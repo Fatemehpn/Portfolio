@@ -1,0 +1,103 @@
+.detailed-section{
+
+  h3{
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  .overview{
+    margin-bottom: 6rem;
+    h2{
+      text-align: center;
+    }
+  }
+  .work-tools{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    row-gap: 0;
+    margin-bottom: 2rem;
+    p{
+      border: 1px solid #ff8400;
+      border-radius: 2rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+  .work-info{
+    .react-tabs{
+      ul{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        li{
+          background-color:inherit;
+          border: none;
+          border-bottom: 2px solid black;
+          font-weight: 600;
+          padding: 0.8rem 2rem;
+
+          &:focus{
+            border-color: #ff8400;
+            &::after{
+              background: none;
+            }
+          }
+        }
+        .react-tabs__tab--selected{
+          border-color: rgb(255, 132, 0);
+          background: none;
+        }
+      }
+    }
+
+    .tab-panel-wrapper{
+      max-width: 35rem;
+      margin: 0 auto;
+      h4{
+        margin-bottom: 0.5rem;
+      }
+      p{
+        margin-top: 0;
+        margin-bottom: 1.7rem;
+      }
+    }
+    
+  }
+}
+
+@media(min-width:56em){
+  .detailed-section{
+    margin-top: 12rem;
+    h3{
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+    .overview{
+      margin: 0 auto 8rem;
+      max-width: 55rem;
+    }
+    .work-tools{
+      p{
+        padding: 0.5rem 1.5rem;
+      }
+    }
+    .work-info{
+      .react-tabs{
+        ul{
+          li{
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .tab-panel-wrapper{
+        max-width: 55rem;
+      }
+    }
+  }
+}

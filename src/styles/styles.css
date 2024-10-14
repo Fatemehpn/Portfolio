@@ -17,12 +17,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 header .logo {
   width: 4rem;
   height: 4rem;
 }
 header button {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  z-index: 10;
   border: 0.1rem solid #703030;
   border-radius: 0.6rem;
   padding: 0.1rem 0.4rem;
@@ -30,6 +35,11 @@ header button {
 }
 header button svg {
   height: 1rem;
+}
+header .general-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 header .general-nav ul {
   list-style: none;

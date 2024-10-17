@@ -12,6 +12,9 @@ body a {
   text-decoration: none;
   color: black;
 }
+body a:visited {
+  color: black;
+}
 
 header {
   display: flex;
@@ -489,16 +492,54 @@ footer .footer-desktop {
   width: 1.5rem;
   height: 1.5rem;
 }
-.single-work-main .work-gallery img, .single-work-main .work-gallery video {
+.single-work-main .work-gallery {
+  margin: 0 auto;
+}
+.single-work-main .work-gallery .slick-slider img, .single-work-main .work-gallery .slick-slider video {
   object-fit: cover;
-  height: 100%;
   width: 100%;
-  max-width: 20rem;
+  max-width: 50rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+.single-work-main .work-gallery .slick-slider .slick-slide {
+  transform: scale(0.8);
+}
+.single-work-main .work-gallery .slick-slider .slick-center {
+  transform: scale(1);
+}
+.single-work-main .work-gallery .slick-slider .slick-arrow {
+  display: none !important;
+}
+.single-work-main .work-gallery .slick-slider .slick-dots li button:before {
+  font-size: 10px;
+}
+.single-work-main .work-gallery .slick-slider .slick-dots li.slick-active button:before {
+  color: #ff8400;
+  opacity: 0.8;
 }
 
 @media (min-width: 56em) {
   .single-work-main .single-page-landing {
     margin: 3rem 0 5rem;
+  }
+  .single-work-main .work-gallery {
+    max-width: 55rem;
+  }
+  .single-work-main .work-gallery .slick-slider img, .single-work-main .work-gallery .slick-slider video {
+    max-width: 50rem;
+  }
+  .single-work-main .work-gallery .slick-slider .slick-arrow {
+    display: block !important;
+  }
+  .single-work-main .work-gallery .slick-slider .slick-next:before {
+    color: #ff8400;
+    font-size: 23px;
+  }
+  .single-work-main .work-gallery .slick-slider .slick-prev:before {
+    color: #ff8400;
+    font-size: 23px;
   }
 }
 

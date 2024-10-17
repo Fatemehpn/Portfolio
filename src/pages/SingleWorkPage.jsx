@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { restBase } from '../utilities/utilities';
 import { Tabs, Tab, TabList, TabPanel } from 'react-tabs';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -14,6 +16,47 @@ function SingleWorkPage() {
   const [restDataSingleWork, setDataSingleWork] = useState([]);
   const [isLoaded, setIsLoaded]     = useState(false);
 
+  // carousel settings
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed:9000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: "150px",
+    responsive: [
+      {
+        breakpoint: 900,         
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          centerPadding: "120px", 
+        }
+      },
+      {
+        breakpoint: 800,        
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          centerPadding: "90px", 
+        }
+      },
+      {
+        breakpoint: 480,         
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          centerPadding: "60px", 
+        }
+      },
+
+    ]
+  };
+
   useEffect(() =>{
     const fetchData = async () =>{
       const response_posts = await fetch(restPathPosts);
@@ -23,7 +66,6 @@ function SingleWorkPage() {
         setIsLoaded(true);
         console.log(singleWorkData);
       }else{
-        console.log('hi');
         setIsLoaded(false);
       }
     }
@@ -121,23 +163,29 @@ function SingleWorkPage() {
               </Tabs>
               </article>
               <article className='work-gallery'>
+                <Slider {...settings}>
                     {
                       restDataSingleWork[0].acf.single_work_image_gallery.map(image=>
                       {
                           if(restDataSingleWork[0].acf.single_page_title == 'ClickFlicks Movie Database'){
                             return(
-                              <video muted autoPlay loop>
-                                  <source src={image.url} type='video/mp4'/>
-                              </video>
+                              <div className='media-wrapper'>
+                                <video muted autoPlay loop>
+                                    <source src={image.url} type='video/mp4'/>
+                                </video>
+                              </div>
                             )
                           } else{
                             return(
-                              <img src={image.url} alt={image.alt}/>
+                              <div className='media-wrapper'>
+                                <img src={image.url} alt={image.alt}/>
+                              </div>
                             )
                           }
                      }
                       )
                     }
+                </Slider>
               </article>
 
             </section>

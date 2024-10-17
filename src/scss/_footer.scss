@@ -1,0 +1,42 @@
+footer{
+  .footer-desktop{
+    display: none;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@media(min-width:56em){ 
+  footer{ 
+    .footer-desktop{
+      display: block;
+      position: fixed;
+      bottom: 1rem;
+      right: 1.5rem;
+      z-index: 20;
+      .footer-icons{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        svg{
+          width: 1.8rem;
+          height: 1.8rem;
+          transition: transform 0.3s ease-in-out;
+          &:hover{
+            animation: bounce 0.8s ease-in-out forwards;
+          }
+          &:focus{
+            animation: none;
+          }
+        }
+      }
+    }
+  }
+}

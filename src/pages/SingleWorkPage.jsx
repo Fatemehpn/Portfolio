@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import ProgressBar from 'react-scroll-progress-bar';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Loading from '../components/Loading';
 
 
 
@@ -67,8 +68,9 @@ function SingleWorkPage() {
       if(response_posts.ok){
         const singleWorkData = await response_posts.json();
         setDataSingleWork(singleWorkData);
-        setIsLoaded(true);
-        console.log(singleWorkData);
+        setTimeout(() =>{
+          setIsLoaded(true);
+        },2000)
       }else{
         setIsLoaded(false);
       }
@@ -101,7 +103,7 @@ function SingleWorkPage() {
 
   return (
     <>
-    <ProgressBar  height="5" bgcolor='#f08a4b'/>
+    <ProgressBar  height="5" bgcolor='#f08a4b' duration='0.2'/>
     <main className='single-work-main'>
       {
         isLoaded?
@@ -203,7 +205,7 @@ function SingleWorkPage() {
       <p>Page under construction</p>
      
         : 
-        <p>Nothing was found</p>
+        <Loading/>
       }   
     </main>
     </>

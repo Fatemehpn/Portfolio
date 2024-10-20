@@ -1,3 +1,31 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading-wrapper {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-wrapper .loading-logo {
+  display: block;
+  max-width: 10rem;
+  margin: 0 auto;
+  animation: fadeIn 3s;
+  position: relative;
+}
+
+@media (min-width: 56em) {
+  .loading-wrapper .loading-logo {
+    max-width: 15rem;
+  }
+}
 body {
   line-height: 1.5;
   max-width: 2000px;
@@ -195,26 +223,32 @@ header .nav-and-button-wrapper .desktop-nav .header-nav ul li a:hover::after {
   font-weight: 600;
   font-size: 1.5rem;
 }
-.home-work-section .home-page-single-work h3 {
+.home-work-section article {
+  background-color: rgb(247, 247, 241);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.home-work-section article .home-page-single-work h3 {
   font-weight: 500;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
-.home-work-section .home-page-single-work .top-skills {
+.home-work-section article .home-page-single-work .top-skills {
   display: flex;
   font-size: 1rem;
   gap: 0.5rem;
 }
-.home-work-section .home-page-single-work .top-skills p:last-child {
+.home-work-section article .home-page-single-work .top-skills p:last-child {
   border: none;
 }
-.home-work-section .home-page-single-work .top-skills p {
+.home-work-section article .home-page-single-work .top-skills p {
   margin: 0;
   position: relative;
   padding-right: 0.5rem;
   border-right: 0.1rem solid black;
 }
-.home-work-section .home-page-single-work .learn-more-button {
+.home-work-section article .home-page-single-work .learn-more-button {
   max-width: 13rem;
   border: 0.15rem solid #f08a4b;
   border-radius: 3rem;
@@ -225,10 +259,10 @@ header .nav-and-button-wrapper .desktop-nav .header-nav ul li a:hover::after {
   gap: 1rem;
   margin-bottom: 2rem;
 }
-.home-work-section .home-page-single-work .learn-more-button p {
+.home-work-section article .home-page-single-work .learn-more-button p {
   margin: 0;
 }
-.home-work-section .home-page-single-work .learn-more-button svg {
+.home-work-section article .home-page-single-work .learn-more-button svg {
   width: 2rem;
 }
 
@@ -243,7 +277,8 @@ header .nav-and-button-wrapper .desktop-nav .header-nav ul li a:hover::after {
     font-size: 2.8rem;
   }
   .home-work-section article {
-    margin-bottom: 15rem;
+    padding: 2rem;
+    margin-bottom: 10rem;
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: auto;

@@ -3,6 +3,8 @@ import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import { restBase } from '../utilities/utilities'
 import { easeInOut, motion } from "framer-motion";
+import Loading from './Loading';
+
 
 function LandingSectionHome() {
   const restPathItems = restBase + 'pages/7'
@@ -42,7 +44,7 @@ function LandingSectionHome() {
         </Link>
       </section>
       :
-      <p>Nothing is Loaded</p>
+      <Loading/>
     }
    </>
     

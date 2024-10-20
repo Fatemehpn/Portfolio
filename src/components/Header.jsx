@@ -1,7 +1,6 @@
 import React from 'react'
 import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
-import '../assets/portfolio-logo.svg';
 import { useState, useEffect } from 'react';
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -32,7 +31,7 @@ function Header() {
 
   return (
   <header>
-    <img src='src/assets/portfolio-logo.svg' className='logo'/>
+    <img src='/logo.svg' className='logo'/>
     <div className='nav-and-button-wrapper'>
     <button onClick={toggleMenu}>
       {

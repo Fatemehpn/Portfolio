@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Header from './components/Header'
+import Footer from './components/Footer';
 import HomePage from './pages/HomePage'
 import './styles/styles.css'
 import SingleWorkPage from './pages/SingleWorkPage'
@@ -18,6 +19,9 @@ function App() {
           <Route  path='/singleworkpage/:slug' element={<SingleWorkPage />}/>
         </Routes>
       </BrowserRouter>
+      <footer>
+        <Footer/>
+      </footer >
     </>
   )
 }

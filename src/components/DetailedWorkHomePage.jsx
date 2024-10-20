@@ -5,6 +5,7 @@ import { rightArrow } from '../utilities/svg';
 import { Link } from 'react-router-dom';
 import { motion, useScroll,useTransform, MotionValue } from 'framer-motion';
 
+
 function DetailedWorkHomePage() {
   const restPathPosts = restBase + 'fp-work/?_embed=true&acf_format=standard';
   const [restDataWork, setDataWork] = useState([]);

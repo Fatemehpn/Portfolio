@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 import { restBase } from '../utilities/utilities';
 import { Tabs, Tab, TabList, TabPanel } from 'react-tabs';
 import Slider from "react-slick";
+import ProgressBar from 'react-scroll-progress-bar';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 
 
 
@@ -15,6 +17,8 @@ function SingleWorkPage() {
   const restPathPosts = restBase + `fp-single-work/?slug=${slug}&acf_format=standard`;
   const [restDataSingleWork, setDataSingleWork] = useState([]);
   const [isLoaded, setIsLoaded]     = useState(false);
+
+  
 
   // carousel settings
   const settings = {
@@ -96,9 +100,13 @@ function SingleWorkPage() {
  
 
   return (
+    <>
+    <ProgressBar  height="5" bgcolor='#f08a4b'/>
     <main className='single-work-main'>
       {
         isLoaded?
+        (slug !== 'portfolio' || slug !== 'capstone-project')?
+        (
       <div>
             <section className='single-page-landing'>
               <h1>{restDataSingleWork[0].acf.single_page_title}</h1>
@@ -190,12 +198,15 @@ function SingleWorkPage() {
 
             </section>
       </div>
+        )
+      :
+      <p>Page under construction</p>
      
-
         : 
         <p>Nothing was found</p>
       }   
     </main>
+    </>
   )
 }
 

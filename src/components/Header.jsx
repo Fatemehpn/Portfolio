@@ -40,12 +40,12 @@ function Header() {
       }
     </button>
     {
-      isMenuOpen? isMobileSize ?  <MobileNav/> : <DesktopNav/> : ''
+      isMenuOpen? isMobileSize ?  <MobileNav closeMenu={() => setMenuOpen(false)}/> : <DesktopNav closeMenu={() => setMenuOpen(false)}/> : ''
     }
     </div>
     
   </header>
   )
-}
+}   
 
 export default Header

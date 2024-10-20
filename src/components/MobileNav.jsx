@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 
-function MobileNav() {
+function MobileNav({closeMenu}) {
 
   
   return (
@@ -17,17 +17,17 @@ function MobileNav() {
       <nav className='header-nav'>
         <ul>
           <li>
-            <Link to='/'>
+            <Link to='/' onClick={closeMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link to='/#work-section'>
+            <Link to='/#work-section' onClick={closeMenu}>
               Work
             </Link>
           </li>
           <li>
-            <Link to='/#about-section'>
+            <Link to='/#about-section' onClick={closeMenu}>
               About
             </Link>
           </li>

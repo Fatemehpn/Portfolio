@@ -500,6 +500,14 @@ footer .footer-desktop {
 .single-work-main {
   margin: 0 1rem;
 }
+.single-work-main .under-construction {
+  font-size: 2rem;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .single-work-main .single-page-landing {
   margin: 5rem 0 10rem;
   max-height: 100vh;

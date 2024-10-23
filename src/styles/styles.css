@@ -321,6 +321,7 @@ header .nav-and-button-wrapper .desktop-nav .header-nav ul li a:hover::after {
 }
 .about-me-section .about-me-text p {
   max-width: 40rem;
+  text-align: justify;
 }
 .about-me-section .about-me-text .react-tabs ul {
   border: none;

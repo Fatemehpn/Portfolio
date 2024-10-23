@@ -1,1 +1,1 @@
-export const restBase = 'https://fatimanassari.com/portfolio-test/wp-json/wp/v2/'
+export const restBase = 'https://fatimanassari.com/portfolio-test/wp-json/wp/v2/'    

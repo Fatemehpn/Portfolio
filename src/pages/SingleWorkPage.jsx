@@ -106,8 +106,13 @@ function SingleWorkPage() {
     <ProgressBar  height="5" bgcolor='#f08a4b' duration='0.2'/>
     <main className='single-work-main'>
       {
+        (slug === 'portfolio' || slug === 'capstone-project')?
+        <div className='under-construction'>
+          <p>Page under construction</p>
+        </div>
+        :
         isLoaded?
-        (slug !== 'portfolio' || slug !== 'capstone-project')?
+        
         (
       <div>
             <section className='single-page-landing'>
@@ -201,8 +206,7 @@ function SingleWorkPage() {
             </section>
       </div>
         )
-      :
-      <p>Page under construction</p>
+
      
         : 
         <Loading/>

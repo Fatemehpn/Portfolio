@@ -20,25 +20,25 @@ function App() {
   })
 
   return (
-    <>
+    <BrowserRouter>
     {
       isLoaded ? (
-      <BrowserRouter>
+        <>
       <Header/>
       <ScrollToTop/>
         <Routes>
           <Route  path='/' element={<HomePage/>}/>
-          <Route  path='/singleworkpage/:slug' element={<SingleWorkPage />}/>
+          <Route  path='/:slug' element={<SingleWorkPage />}/>
         </Routes>
       <footer>
         <Footer/>
       </footer >
-      </BrowserRouter>
+        </>
       )
       :
       <Loading/>
     }
-    </>
+    </BrowserRouter>
   )
 }
 

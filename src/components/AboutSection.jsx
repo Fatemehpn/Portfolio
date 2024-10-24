@@ -53,16 +53,17 @@ function AboutSection() {
 
   return (
     <section className='about-me-section' id='about-section'>
+      <h2>About</h2>
     {
       isLoaded?
       
       <div className='about-me-text'>
         <div className={`about-text ${isVisible? 'about-visible' : ''}`} ref={elementRef}
       >
-        <h2>About Me</h2>
+        <h3>About Me</h3>
           <p>{restDataAbout.acf.about_me}</p>
         </div>
-          <article>
+          <article className={isVisible? 'skill-visible' : ''} ref={elementRef}>
             <h3>Skills</h3>
             <Tabs>
               <TabList>

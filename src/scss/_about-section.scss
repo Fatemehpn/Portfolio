@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes slideInFromRight{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
 .about-me-section{
   .about-me-text{
     p{
@@ -53,20 +62,36 @@
         }
       }
     }
+    .about-visible{
+      animation: slideIn ease-in 0.8s;
+    }
+    .skill-visible{
+      animation: slideInFromRight ease-in 0.8s;
+    }
   }
 }
 
 @media(min-width:56em){
   .about-me-section{
-    margin: 0 2rem;
+    h2{
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+    margin: 0 2rem 4rem;
     .about-me-text{
+      display: grid;
+      grid-template-columns: minmax(20rem,40rem) minmax(30rem,40rem);
+      gap: 2.5rem;
+      h3{
+        font-size:1.8rem;
+        font-weight: 500;
+
+      }
       .about-text{
         p{
+          font-size: 1.2rem;
           max-width: 60rem;
         }
-      }
-      .about-visible{
-        animation: slideIn ease-in 0.6s;
       }
     }
   }

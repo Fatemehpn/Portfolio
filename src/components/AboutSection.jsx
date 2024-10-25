@@ -62,7 +62,7 @@ function AboutSection() {
                   <Marquee autoFill={true} pauseOnHover={true}>
                     {
                       restDataAbout.acf.all_skills_label_and_icon.map(skill=>
-                        <figure className='single-skill'>
+                        <figure className='single-skill' key={skill.skill_image.alt}>
                         <img src={skill.skill_image.url} alt={skill.skill_image.alt} />
                         <figcaption>{skill.skill_label}</figcaption>
                         </figure>
@@ -76,7 +76,7 @@ function AboutSection() {
                       restDataAbout.acf.all_skills_label_and_icon.map(skill=>{
                         if(skill.skill_category[1] == 'Development'){
                           return(
-                          <figure className='single-skill'>
+                          <figure className='single-skill' key={skill.skill_image.alt}>
                           <img src={skill.skill_image.url} alt={skill.skill_image.alt} />
                           <figcaption>{skill.skill_label}</figcaption>
                           </figure>
@@ -93,7 +93,7 @@ function AboutSection() {
                       restDataAbout.acf.all_skills_label_and_icon.map(skill=>{
                         if(skill.skill_category[1] == 'Design'){
                           return(
-                          <figure className='single-skill'>
+                          <figure className='single-skill' key={skill.skill_image.alt}>
                           <img src={skill.skill_image.url} alt={skill.skill_image.alt} />
                           <figcaption>{skill.skill_label}</figcaption>
                           </figure>

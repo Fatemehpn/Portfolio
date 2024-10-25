@@ -3,7 +3,7 @@ import {useState, useEffect, useRef} from 'react'
 import { restBase } from '../utilities/utilities'
 import { rightArrow } from '../utilities/svg';
 import { Link } from 'react-router-dom';
-import { motion, useScroll,useTransform, MotionValue } from 'framer-motion';
+
 
 
 function DetailedWorkHomePage() {
@@ -39,7 +39,7 @@ function DetailedWorkHomePage() {
                  <h3>{post.acf.work_title}</h3>
                  <div className='top-skills'>
                    {(post.acf.tools).map(tool=>
-                     <p>{tool}</p>
+                     <p key={tool}>{tool}</p>
                    )}
                  </div>
  

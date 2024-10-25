@@ -4,6 +4,7 @@ import { restBase } from '../utilities/utilities'
 import {Tab, Tabs, TabList,TabPanel} from 'react-tabs'
 import 'react-tabs/style/react-tabs.css';
 import Marquee from "react-fast-marquee";
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -26,43 +27,29 @@ function AboutSection() {
     fetchData();
   },[restPathItems])
 
-  const elementRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (elementRef.current) {
-        const rect = elementRef.current.getBoundingClientRect();
-        const isVisible = (
-          rect.top < window.innerHeight && 
-          rect.bottom > 0 
-        );
-        setIsVisible(isVisible);
-      }
-    };
+  
+  const {ref:aboutRef, inView:aboutVisible} = useInView({
+    threshold:0
+  });
 
-    window.addEventListener('scroll', handleScroll);
-
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const {ref:skillRef, inView:skillVisible} = useInView({
+    threshold:0
+  });
 
 
 
   return (
     <section className='about-me-section' id='about-section'>
+      <h2>About</h2>
     {
       isLoaded?
       
       <div className='about-me-text'>
-        <div className={`about-text ${isVisible? 'about-visible' : ''}`} ref={elementRef}
-      >
-        <h2>About Me</h2>
+        <div className={`about-text ${aboutVisible? 'about-visible' : ''}`} ref={aboutRef}>
+        <h3>About Me</h3>
           <p>{restDataAbout.acf.about_me}</p>
         </div>
-          <article>
+          <article className={skillVisible ? 'skill-visible' : ''} ref={skillRef}>
             <h3>Skills</h3>
             <Tabs>
               <TabList>

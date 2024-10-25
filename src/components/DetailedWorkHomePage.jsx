@@ -44,7 +44,7 @@ function DetailedWorkHomePage() {
                  </div>
  
                  <p className='work-short-overview'>{post.acf.work_short_description}</p>
-                 <Link className='learn-more-button' to={`singleworkpage/${post.slug}`}>
+                 <Link className='learn-more-button' to={`/${post.slug}`}>
                    <p>Learn More</p>
                    {rightArrow}
                  </Link>

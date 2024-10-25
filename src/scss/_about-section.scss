@@ -1,17 +1,21 @@
 @keyframes slideIn{
   0%{
+    opacity: 0;
     transform: translateX(-100%);
   }
   100%{
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes slideInFromRight{
   0%{
+    opacity: 0;
     transform: translateX(100%);
   }
   100%{
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -64,11 +68,20 @@
     }
     .about-visible{
       animation: slideIn ease-in 0.8s;
+      animation-delay: 0.2s;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.5s ease, transform 0.5s ease; 
     }
     .skill-visible{
       animation: slideInFromRight ease-in 0.8s;
+      animation-delay: 0.2s;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
   }
+
 }
 
 @media(min-width:56em){

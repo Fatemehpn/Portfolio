@@ -67,18 +67,16 @@
       }
     }
     .about-visible{
-      animation: slideIn ease-in 0.8s;
+      animation: slideIn ease-in 0.8s forwards;
       animation-delay: 0.2s;
       opacity: 1;
-      transform: translateX(0);
-      transition: opacity 0.5s ease, transform 0.5s ease; 
+      will-change: opacity, transform;
     }
     .skill-visible{
-      animation: slideInFromRight ease-in 0.8s;
+      animation: slideInFromRight ease-in 0.8s forwards;
       animation-delay: 0.2s;
       opacity: 1;
-      transform: translateX(0);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      will-change: opacity, transform;
     }
   }
 

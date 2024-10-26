@@ -14,7 +14,8 @@ function HomePage() {
   return (
     <>
       <ProgressBar  height="5" bgcolor='#f08a4b' duration='0.2'/>
-      <main className='home-page'>
+      <a href="#site-main" class="screen-reader-text">skip to content</a>
+      <main className='home-page' id='site-main'>
         <LandingSectionHome/>
         <DetailedWorkHomePage/>
         <AboutSection/>

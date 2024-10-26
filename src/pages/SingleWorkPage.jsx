@@ -104,7 +104,8 @@ function SingleWorkPage() {
   return (
     <>
     <ProgressBar  height="5" bgcolor='#f08a4b' duration='0.2'/>
-    <main className='single-work-main'>
+    <a href="#site-main" class="screen-reader-text">skip to content</a>
+    <main className='single-work-main' id='site-main'>
       {
         isLoaded?
         

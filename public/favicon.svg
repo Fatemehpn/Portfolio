@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="512" height="512"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="SvgjsClipPath1024">
+      <rect width="512" height="512"></rect>
+    </clipPath>
+  </defs>
+  <g id="SvgjsG1023" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <g id="SvgjsG1022" data-name="Group 1" transform="translate(40 -0.5)">
+      <text id="SvgjsText1021" transform="translate(225 431.5)" stroke="#000" stroke-width="1" font-size="400" font-family="GowunBatang-Regular, Gowun Batang" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan x="0" y="0">F</tspan></text>
+      <text id="SvgjsText1020" transform="matrix(-1, 0, 0, 1, 229, 433)" fill="none" stroke="#f08a4b" stroke-linecap="round" stroke-width="5" font-size="400" font-family="GowunBatang-Regular, Gowun Batang" svgjs:data="{&quot;leading&quot;:&quot;1.3&quot;}"><tspan x="0" y="0">P</tspan></text>
+    </g>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
